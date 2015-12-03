@@ -15,8 +15,16 @@ public class AccueilActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_accueil);
         Button selectButton = (Button) findViewById(R.id.selectButton);
-        TextView myTextView=(TextView)findViewById(R.id.);
-        Typeface typeFace=Typeface.createFromAsset(getAssets(),"fonts/mytruetypefont.ttf");
-        myTextView.setTypeface(typeFace);
+        Button newButton = (Button) findViewById(R.id.newButton);
+        TextView nameAppli=(TextView)findViewById(R.id.nameAppli);
+        TextView descripAppli=(TextView)findViewById(R.id.descripAppli);
+
+        Typeface typeFace=Typeface.createFromAsset(getAssets(),"fonts/gravity/Gravity-Book.otf");
+        selectButton.setTypeface(typeFace);
+        newButton.setTypeface(typeFace);
+        nameAppli.setTypeface(typeFace);
+        descripAppli.setTypeface(typeFace);
+
+
     }
 }

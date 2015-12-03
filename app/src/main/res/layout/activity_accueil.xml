@@ -1,44 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="2"
+    >
     <LinearLayout
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_width="match_parent"
         android:orientation="vertical"
-        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:layout_weight="1"
         >
-
         <TextView
             android:id="@+id/nameAppli"
             android:layout_gravity="center_horizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Gimpsy"
-            android:textSize="40dp"/>
-
+            android:textSize="60dp"
+            android:textColor="@color/colorFont"/>
         <TextView
             android:id="@+id/descripAppli"
             android:layout_gravity="center_horizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Je code avec le cul lalalalala"
-            android:textSize="20dp"/>
-
-        <Button
-            android:id="@+id/selectButton"
-            android:textColor="@color/colorFont"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Sélection Bâtiment"
-            android:fontFamily="Helvetica"/>
-
-        <Button
-            android:id="@+id/newButton"
-            android:textColor="@color/colorFont"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Nouveau Bâtiment"
-            android:fontFamily="gravity"/>
+            android:text="Système de guidage intérieur"
+            android:textSize="20dp"
+            android:textColor="@color/colorFont"/>
     </LinearLayout>
-</RelativeLayout>
+    <LinearLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:gravity="center"
+        >
+        <LinearLayout
+            android:id="@+id/OuterlinLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:weightSum="479" >
+            <LinearLayout
+                android:id="@+id/containerLayout1"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight="102"
+                android:orientation="horizontal" />
+            <LinearLayout
+                android:id="@+id/GlobalLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:layout_weight="275"
+                android:orientation="vertical" >
+                <Button
+                    android:id="@+id/selectButton"
+                    android:textColor="@color/colorFont"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Sélection Bâtiment"
+                    />
+                <Button
+                android:id="@+id/newButton"
+                android:textColor="@color/colorFont"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nouveau Bâtiment"
+                />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/containerLayout2"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:layout_weight="102"
+                android:orientation="horizontal" >
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
