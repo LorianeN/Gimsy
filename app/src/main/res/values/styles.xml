@@ -8,4 +8,20 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="myTheme" parent="@android:style/Theme.Light">
+        <item name="android:actionBarStyle">@style/myTheme.ActionBar</item>
+        <item name="android:actionMenuTextColor">@color/colorFont</item>
+    </style>
+
+    <style name="myTheme.ActionBar" parent="@android:style/Widget.Holo.Light.ActionBar">
+        <item name="android:titleTextStyle">@style/myTheme.ActionBar.Text</item>
+    </style>
+
+    <style name="myTheme.ActionBar.Text" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/colorFont</item>
+    </style>
+
+
+
+
 </resources>
