@@ -2,6 +2,7 @@ package fred.gimsy;
 
 import android.content.res.Resources;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Button;
@@ -14,5 +15,8 @@ public class AccueilActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_accueil);
         Button selectButton = (Button) findViewById(R.id.selectButton);
+        TextView myTextView=(TextView)findViewById(R.id.);
+        Typeface typeFace=Typeface.createFromAsset(getAssets(),"fonts/mytruetypefont.ttf");
+        myTextView.setTypeface(typeFace);
     }
 }

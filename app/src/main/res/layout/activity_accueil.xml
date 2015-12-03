@@ -8,6 +8,23 @@
         android:orientation="vertical"
         android:layout_centerVertical="true"
         >
+
+        <TextView
+            android:id="@+id/nameAppli"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gimpsy"
+            android:textSize="40dp"/>
+
+        <TextView
+            android:id="@+id/descripAppli"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Je code avec le cul lalalalala"
+            android:textSize="20dp"/>
+
         <Button
             android:id="@+id/selectButton"
             android:textColor="@color/colorFont"
