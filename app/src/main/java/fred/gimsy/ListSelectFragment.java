@@ -3,6 +3,7 @@ package fred.gimsy;
 import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.ListFragment;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -23,7 +24,7 @@ import fred.gimsy.lieux.LieuxContent;
  * Activities containing this fragment MUST implement the {@link OnFragmentInteractionListener}
  * interface.
  */
-public class ListSelectFragment extends Fragment implements ListView.OnItemClickListener {
+public class ListSelectFragment extends ListFragment{
 
     ArrayList<ObjetLieux> arrayLieux = new ArrayList<>();
     private OnFragmentInteractionListener mListener;
@@ -66,6 +67,9 @@ public class ListSelectFragment extends Fragment implements ListView.OnItemClick
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        this.setListAdapter(new ArrayAdapter<String>(this, R.layout.mylist,
+                R.id.Itemname,itemname));
+        return super.onCreateView(inflater, container, savedInstanceState);
         View view = inflater.inflate(R.layout.fragment_list_select, container, false);
 
 

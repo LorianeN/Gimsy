@@ -25,9 +25,9 @@ public class LieuxContent {
 
     static {
         // Add 3 sample items.
-        addItem(new DummyItem("1", "Item 1"));
-        addItem(new DummyItem("2", "Item 2"));
-        addItem(new DummyItem("3", "Item 3"));
+        addItem(new DummyItem("1", "Hopital", "La Timone"));
+        addItem(new DummyItem("2", "Stade", "Stade de France"));
+        addItem(new DummyItem("3", "Musée", "Le Louvre"));
     }
 
     private static void addItem(DummyItem item) {
@@ -40,16 +40,19 @@ public class LieuxContent {
      */
     public static class DummyItem {
         public String id;
-        public String content;
+        public String type;
+        public String nom;
 
-        public DummyItem(String id, String content) {
+        public DummyItem(String id, String type, String nom) {
             this.id = id;
-            this.content = content;
+            this.type = type;
+            this.nom = nom;
         }
 
         @Override
         public String toString() {
-            return content;
+
+            return nom;
         }
     }
 }
