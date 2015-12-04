@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:title="@string/app_name"
+        android:id="@+id/action_cart"
+        android:icon="@drawable/mic"
+        android:orderInCategory="100"
+        app:showAsAction="always"/>
+    <item
+        android:title="@string/app_name"
+        android:id="@+id/parameters"
+        android:icon="@drawable/picto_parametre"
+        android:orderInCategory="100"
+        app:showAsAction="always"/>
+</menu>

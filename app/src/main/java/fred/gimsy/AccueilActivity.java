@@ -46,4 +46,11 @@ public class AccueilActivity extends AppCompatActivity {
         intent.putExtra("","");
         startActivity(intent);
     }
+
+    public void newLieu(View view) {
+        //TODO passer à l'activité suivante
+        Intent intent = new Intent(AccueilActivity.this,NewLieuActivity.class);
+        intent.putExtra("","");
+        startActivity(intent);
+    }
 }
