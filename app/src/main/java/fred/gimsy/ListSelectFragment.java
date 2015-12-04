@@ -70,7 +70,7 @@ public class ListSelectFragment extends Fragment implements ListView.OnItemClick
 
 
         Log.d("SONPERE", "je créé la view de mon fragment list detail_liste");
-        mListView = (ListView) view.findViewById(R.id.liste_items);
+        mListView = (ListView) view.findViewById(R.id.list_lieux);
         mListView.setAdapter(ItemAdapter);
         Log.d("SONPERE","c'est fait (view Fragment item)!");
         // Set OnItemClickListener so we can be notified on item clicks
@@ -100,26 +100,8 @@ public class ListSelectFragment extends Fragment implements ListView.OnItemClick
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         if (null != mListener) {
-            // Notify the active callbacks interface (the activity, if the
-            // fragment is attached to one) that an item has been selected.
-            Log.d("SONPERE", "item " + listItem.get(position).getIdItem() + " est " + listItem.get(position).getTaken() + " et choisi par " + listItem.get(position).getChosen());
-            if (listItem.get(position).getChosen().equals(Client.getClient().getUserName()) || listItem.get(position).getChosen().equals("personne")) {
-                if(!listItem.get(position).getTaken()) {
-                    listItem.get(position).setChosen(Client.getClient().getUserName());
-                    listItem.get(position).setTaken(true);
-                    ItemAdapter.notifyDataSetChanged();
-
-                    roger.itemUpdated(true,listItem.get(position).getIdItem());
-                }
-                else{
-                    listItem.get(position).setChosen("personne");
-                    listItem.get(position).setTaken(false);
-                    ItemAdapter.notifyDataSetChanged();
-                    roger.itemUpdated(false, listItem.get(position).getIdItem());
-                }
-            }
-            mListener.onFragmentInteraction(String.valueOf(ItemsContent.ITEMS.get(position).id));
-        }
+//TODO : Mettre l'activité suivante >> navigation
+       }
     }
 
     /**
