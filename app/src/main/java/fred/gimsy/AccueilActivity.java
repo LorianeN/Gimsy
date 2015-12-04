@@ -1,11 +1,9 @@
 package fred.gimsy;
 
-<<<<<<< HEAD
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-=======
 import android.content.res.Resources;
 import android.graphics.Color;
 import android.graphics.Typeface;
@@ -15,7 +13,6 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.widget.Button;
 import android.widget.TextView;
->>>>>>> refs/remotes/origin/nlaubeuf
 
 public class AccueilActivity extends AppCompatActivity {
 
@@ -39,13 +36,13 @@ public class AccueilActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.yourentry, menu);
+
         return true;
     }
 
     public void selectLieux(View view) {
         //TODO passer à l'activité suivante
-        Intent intent = new Intent(AccueilActivity.this,
-                Detail_liste.class);
+        Intent intent = new Intent(AccueilActivity.this,SelectItemActivity.class);
         intent.putExtra("","");
         startActivity(intent);
     }
